@@ -1,12 +1,12 @@
 package fi.tiituste.elisaspaceflightnews.api
 
-import fi.tiituste.elisaspaceflightnews.data.ArticleModel
+import fi.tiituste.elisaspaceflightnews.model.ArticleModel
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 object SpaceFlightApi {
-    const val URL = "https://api.spaceflightnewsapi.net/v3/"
+    private const val URL = "https://api.spaceflightnewsapi.net/v3/"
 
     interface Service {
         @GET("articles?_limit=7")

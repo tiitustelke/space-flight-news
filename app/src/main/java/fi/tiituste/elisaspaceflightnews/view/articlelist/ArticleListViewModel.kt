@@ -1,8 +1,8 @@
-package fi.tiituste.elisaspaceflightnews.view
+package fi.tiituste.elisaspaceflightnews.view.articlelist
 
 import android.app.Application
 import androidx.lifecycle.*
-import fi.tiituste.elisaspaceflightnews.data.ArticleModel
+import fi.tiituste.elisaspaceflightnews.model.ArticleModel
 import fi.tiituste.elisaspaceflightnews.repository.SpaceFlightNewsRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
