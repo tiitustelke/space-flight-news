@@ -5,5 +5,5 @@ This app is done using Jetpack Compose, which I like quite much as it makes buil
 The article list view has swipe refresh. The UI is clear. Dates are formatted according to user locale.
 ## How can I run this app?
 1. Clone this repository (`git clone git@https://github.com/tiitustelke/elisa-space-flight-news.git`).
-2. Connect your physical Android device and make sure the [USB debugging](https://developer.android.com/studio/debug/dev-options) is enabled.
+2. Connect your physical Android device and make sure the [USB debugging](https://developer.android.com/studio/debug/dev-options) is enabled or use the emulator.
 3. Choose your device from a device dropdown menu and run the application from the Android Studio's play button. Building the application might take for a while.
