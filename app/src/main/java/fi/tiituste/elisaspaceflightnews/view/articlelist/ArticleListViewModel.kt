@@ -15,12 +15,12 @@ class ArticleListViewModel(application: Application) : AndroidViewModel(applicat
     private val spaceFlightNewsRepository = SpaceFlightNewsRepository()
 
     private val _articles = MutableLiveData<List<ArticleModel>?>(null)
+    val articles: LiveData<List<ArticleModel>?>
+        get() = _articles
 
     private val _isRefreshing = MutableStateFlow(false)
     val isRefreshing: StateFlow<Boolean>
         get() = _isRefreshing.asStateFlow()
-    val articles: LiveData<List<ArticleModel>?>
-        get() = _articles
 
     fun getArticles() {
         viewModelScope.launch {
