@@ -24,7 +24,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito
 import org.robolectric.annotation.Config
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.io.InputStream
@@ -33,9 +32,9 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
 
 /**
- * Example local unit test, which will execute on the development machine (host).
+ * Unit tests for viewmodel and Gson conversion
  *
- * See [testing documentation](http://d.android.com/tools/testing).
+ *
  */
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Q])

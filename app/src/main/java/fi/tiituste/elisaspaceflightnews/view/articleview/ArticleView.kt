@@ -29,6 +29,8 @@ import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import fi.tiituste.elisaspaceflightnews.R
 import fi.tiituste.elisaspaceflightnews.model.ArticleModel
+import fi.tiituste.elisaspaceflightnews.util.DateUtil
+import java.time.format.FormatStyle
 
 @ExperimentalCoilApi
 @Composable
@@ -82,17 +84,41 @@ fun ArticleView(navController: NavController, article: ArticleModel?) {
                     ) {
                         Text(
                             text = article.title ?: "",
-                            style = MaterialTheme.typography.h3,
+                            style = MaterialTheme.typography.h4,
                             modifier = Modifier
                                 .padding(top = 12.dp)
                                 .clickable { article.url?.let { url -> uriHandler.openUri(url) } }
                         )
                         Text(
-                            text = article.summary ?: "",
+                            text = "${stringResource(id = R.string.published)}: ${
+                                DateUtil.getFormattedDate(
+                                    article.publishedAt,
+                                    FormatStyle.MEDIUM
+                                )
+                            }",
                             style = MaterialTheme.typography.caption,
-                            modifier = Modifier.padding(top = 8.dp)
+                            modifier = Modifier.padding(8.dp, top = 16.dp)
                         )
-                        Text(text = article.newsSite ?: "", modifier = Modifier.padding(top = 8.dp))
+                        Text(
+                            text = "${stringResource(id = R.string.updated)} ${
+                                DateUtil.getFormattedDate(
+                                    article.updatedAt,
+                                    FormatStyle.MEDIUM
+                                )
+                            }",
+                            style = MaterialTheme.typography.caption,
+                            modifier = Modifier.padding(8.dp)
+                        )
+                        Text(
+                            text = article.summary ?: "",
+                            style = MaterialTheme.typography.body1,
+                            modifier = Modifier.padding(top = 16.dp)
+                        )
+                        Text(
+                            text = article.newsSite ?: "",
+                            style = MaterialTheme.typography.subtitle1,
+                            modifier = Modifier.padding(top = 32.dp)
+                        )
                     }
                 }
             }

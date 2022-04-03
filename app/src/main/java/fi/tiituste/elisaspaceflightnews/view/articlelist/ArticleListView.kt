@@ -10,7 +10,6 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
@@ -28,6 +27,8 @@ import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.google.gson.Gson
 import fi.tiituste.elisaspaceflightnews.navigation.NavigationRoutes
+import fi.tiituste.elisaspaceflightnews.util.DateUtil
+import java.time.format.FormatStyle
 
 @ExperimentalCoilApi
 @Composable
@@ -89,7 +90,7 @@ fun ArticleListView(
                                     verticalArrangement = Arrangement.SpaceEvenly
                                 ) {
                                     Text(article.title!!)
-                                    Text(article.updatedAt!!)
+                                    Text(DateUtil.getFormattedDate(article.publishedAt, FormatStyle.SHORT) ?: "")
                                     Icon(
                                         imageVector = Icons.Filled.ArrowForward,
                                         contentDescription = null,

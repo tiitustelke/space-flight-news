@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Elisa Space Flight News</string>
+    <string name="published">Published</string>
+    <string name="updated">Updated</string>
 </resources>
