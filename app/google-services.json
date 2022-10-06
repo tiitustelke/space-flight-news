@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "196368329572",
+    "project_id": "space-flight-news",
+    "storage_bucket": "space-flight-news.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196368329572:android:46cfcad36f24ea64ac6871",
+        "android_client_info": {
+          "package_name": "fi.tiituste.elisaspaceflightnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196368329572-hgrd3sjror2p53gfkqc0t1u9gmrrirqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1uJ8t7gpZI9FdNAYM01rRoT-xEPckKlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196368329572-hgrd3sjror2p53gfkqc0t1u9gmrrirqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
