@@ -1,4 +1,4 @@
-# Elisa Space Flight News
+# Space Flight News
 A code challenge app for a recruiting process. This Android app shows space-related news articles using [Space Flights News Api](https://www.spaceflightnewsapi.net/).
 ## (Nice) things about this app
 This app is done using Jetpack Compose, which I like quite much as it makes building UI easier with less code. The architecture follows MVVM.
